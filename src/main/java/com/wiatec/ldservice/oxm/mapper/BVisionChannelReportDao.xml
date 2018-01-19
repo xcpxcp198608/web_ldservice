@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiatec.ldservice.oxm.dao.BVisionChannelReportDao">
+    <resultMap type="com.wiatec.ldservice.oxm.pojo.BVisionChannelReportInfo" id="bVisionChannelReportInfo">
+        <id column="id" property="id"/>
+        <result column="userName" property="userName"/>
+        <result column="channelName" property="channelName"/>
+        <result column="message" property="message"/>
+        <result column="reportTime" property="reportTime"/>
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="bVisionChannelReportInfo">
+        SELECT * FROM bvision_channel_report
+    </select>
+
+    <insert id="insertOne" parameterType="com.wiatec.ldservice.oxm.pojo.BVisionChannelReportInfo">
+        INSERT INTO bvision_channel_report (userName, channelName, message)
+        VALUES (#{userName}, #{channelName}, #{message})
+    </insert>
+
+</mapper>

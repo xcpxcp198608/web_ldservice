@@ -1,0 +1,20 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiatec.ldservice.oxm.dao.RemoteAppDao">
+    <resultMap type="com.wiatec.ldservice.oxm.pojo.RemoteApkInfo" id="apkInfo">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="packageName" property="packageName"/>
+        <result column="url" property="url"/>
+        <result column="code" property="code"/>
+    </resultMap>
+
+    <sql id="selectAll">SELECT id, name, packageName, url, code FROM app_remote</sql>
+
+    <select id="selectAll" resultMap="apkInfo">
+        <include refid="selectAll"/>
+    </select>
+
+
+</mapper>

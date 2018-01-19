@@ -1,0 +1,30 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiatec.ldservice.oxm.dao.ResourceAppDao">
+    <resultMap type="com.wiatec.ldservice.oxm.pojo.ResourceAppInfo" id="resourceAppInfo">
+        <id column="id" property="id"/>
+        <result column="label" property="label"/>
+        <result column="icon" property="icon"/>
+        <result column="packageName" property="packageName"/>
+        <result column="url" property="url"/>
+        <result column="version_code" property="versionCode"/>
+        <result column="type" property="type"/>
+    </resultMap>
+
+    <sql id="selectAll">
+        SELECT id, label, icon, package_name, url, version_code, type
+        FROM app_resources
+        ORDER BY label
+    </sql>
+
+    <select id="selectAll" resultMap="resourceAppInfo">
+        <include refid="selectAll"/>
+    </select>
+
+    <select id="selectByType" resultMap="resourceAppInfo">
+        <include refid="selectAll"/> WHERE  type=#{type}
+    </select>
+
+
+</mapper>

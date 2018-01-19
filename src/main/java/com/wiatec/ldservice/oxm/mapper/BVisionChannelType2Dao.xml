@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiatec.ldservice.oxm.dao.BVisionChannelType2Dao">
+    <resultMap type="com.wiatec.ldservice.oxm.pojo.BVisionChannelType2Info" id="bVisionChannelType2Info">
+        <id column="id" property="id"/>
+        <result column="tag" property="tag"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="flag" property="flag"/>
+        <result column="type" property="type"/>
+    </resultMap>
+
+
+    <sql id="select">
+        SELECT * FROM bvision_channel_type2
+    </sql>
+
+    <select id="selectByType" resultMap="bVisionChannelType2Info">
+        <include refid="select"/> WHERE type=#{type}
+    </select>
+</mapper>

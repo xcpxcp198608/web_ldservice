@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ldservice.iml" filepath="$PROJECT_DIR$/.idea/modules/ldservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ldservice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ldservice_main.iml" group="ldservice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ldservice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ldservice_test.iml" group="ldservice" />
+    </modules>
+  </component>
+</project>

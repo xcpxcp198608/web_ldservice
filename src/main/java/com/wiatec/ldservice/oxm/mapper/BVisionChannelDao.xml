@@ -1,0 +1,39 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiatec.ldservice.oxm.dao.BVisionChannelDao">
+    <resultMap type="com.wiatec.ldservice.oxm.pojo.BVisionChannelInfo" id="bVisionChannelInfo">
+        <id column="id" property="id"/>
+        <result column="channelId" property="channelId"/>
+        <result column="sequence" property="sequence"/>
+        <result column="tag" property="tag"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="icon" property="icon"/>
+        <result column="country" property="country"/>
+        <result column="type" property="type"/>
+        <result column="style" property="style"/>
+        <result column="visible" property="visible"/>
+        <result column="locked" property="locked"/>
+    </resultMap>
+
+
+    <sql id="select">
+        SELECT * FROM bvision_channel
+    </sql>
+
+    <select id="selectByCountry" resultMap="bVisionChannelInfo">
+        <include refid="select"/>
+        WHERE country=#{country}
+        AND visible=1
+        ORDER BY name
+    </select>
+
+    <select id="selectByKey" resultMap="bVisionChannelInfo">
+        <include refid="select"/>
+        WHERE name LIKE concat('%',#{key},'%')
+        AND visible=1
+        ORDER BY name
+    </select>
+
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="wiatec-216.176.190.154">
+    <serverData>
+      <paths name="wiatec-216.176.190.154">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ftp/ldservice/out" local="$PROJECT_DIR$/build/libs/exploded/ldservice-1.0-SNAPSHOT.war" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
