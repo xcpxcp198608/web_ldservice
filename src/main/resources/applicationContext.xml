@@ -27,7 +27,7 @@
     <bean name="propertyPlaceholder" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:jdbc.properties"/>
     </bean>
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+    <bean id="ldServiceDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="filters" value="stat" />
         <property name="username" value="${user}"/>
         <property name="password" value="${password}"/>
@@ -46,6 +46,37 @@
         <property name="poolPreparedStatements" value="false" />
         <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
     </bean>
+
+    <bean id="livePlayDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <property name="filters" value="stat" />
+        <property name="username" value="${user}"/>
+        <property name="password" value="${password_live_play}"/>
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url_live_play}"/>
+        <property name="initialSize" value="${initSize}" />
+        <property name="minIdle" value="${minSize}" />
+        <property name="maxActive" value="${maxSize}" />
+        <property name="maxWait" value="${maxWait}" />
+        <property name="timeBetweenEvictionRunsMillis" value="${timeBetweenEvictionRunsMillis}" />
+        <property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}" />
+        <property name="validationQuery" value="SELECT 'x'" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+        <property name="poolPreparedStatements" value="false" />
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
+    </bean>
+
+    <bean id="dataSource" class="com.wiatec.ldservice.oxm.data_source.DynamicDataSource">
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <entry key="ldServiceDataSource" value-ref="ldServiceDataSource"/>
+                <entry key="livePlayDataSource" value-ref="livePlayDataSource"/>
+            </map>
+        </property>
+        <property name="defaultTargetDataSource" ref="ldServiceDataSource"/>
+    </bean>
+
     <bean name="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis-configuration.xml"/>

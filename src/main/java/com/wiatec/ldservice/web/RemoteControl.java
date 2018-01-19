@@ -1,9 +1,10 @@
 package com.wiatec.ldservice.web;
 
 import com.wiatec.ldservice.common.result.ResultInfo;
+import com.wiatec.ldservice.oxm.pojo.ControlPlayChannelInfo;
 import com.wiatec.ldservice.oxm.pojo.ControlPlayInfo;
 import com.wiatec.ldservice.service.ControlPlayService;
-import com.wiatec.ldservice.service.ChannelService;
+import com.wiatec.ldservice.service.liveplay.LivePlayChannelService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,15 +23,14 @@ public class RemoteControl {
     @Resource
     private ControlPlayService controlPlayService;
     @Resource
-    private ChannelService channelService;
+    private LivePlayChannelService livePlayChannelService;
 
     @RequestMapping(value = "/")
     public String list(Model model){
         List<ControlPlayInfo> controlPlayInfoList = controlPlayService.list();
-        List<Integer> channelIdList = channelService.getAllChannelId();
-        System.out.println(channelIdList);
-        model.addAttribute("automaticPlayInfoList", controlPlayInfoList);
-        model.addAttribute("channelIdList", channelIdList);
+        List<ControlPlayChannelInfo> controlPlayChannelInfoList = livePlayChannelService.getAllChannelId();
+        model.addAttribute("controlPlayInfoList", controlPlayInfoList);
+        model.addAttribute("controlPlayChannelInfoList", controlPlayChannelInfoList);
         return "control/play";
     }
 
@@ -38,7 +38,7 @@ public class RemoteControl {
     @ResponseBody
     public ResultInfo update(ControlPlayInfo controlPlayInfo, int channelId){
         if(channelId > 1){
-            String url = channelService.getUrlById(channelId);
+            String url = livePlayChannelService.getUrlById(channelId);
             controlPlayInfo.setUrl(url);
         }
         return controlPlayService.update(controlPlayInfo);

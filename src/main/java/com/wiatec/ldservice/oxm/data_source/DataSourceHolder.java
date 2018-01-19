@@ -1,5 +1,8 @@
 package com.wiatec.ldservice.oxm.data_source;
 
+/**
+ * @author patrick
+ */
 public class DataSourceHolder {
 
     private static final ThreadLocal<String> dataSources = new ThreadLocal<String>();

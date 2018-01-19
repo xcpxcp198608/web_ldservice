@@ -1,35 +1,41 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-%>
+<%@ taglib uri="http://www.rapid-framework.org.cn/rapid" prefix="rapid" %>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<rapid:override name="title">
+    Play
+</rapid:override>
+<rapid:override name="css/js">
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-    <base href="<%=basePath%>">
-
-    <title>Play</title>
-
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="This is my page">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <!--
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <script type="application/javascript" language="JavaScript" src="js/base.js"/>
-    <link rel="shortcut icon" href="img/xxx.ico">
-    -->
-
-</head>
-
-<body>
+</rapid:override>
 
 
-</body>
-</html>
+<rapid:override name="content">
+
+    <div style="clear: both; margin-top: 5px; box-shadow: 0 0 5px #000;">
+        <table class="table table-bordered table-hover table-striped table-condensed"
+               id="tbDevices">
+            <thead style="background-color: #566778;">
+            <tr id="trSales">
+                <th></th>
+                <th>#</th>
+                <th>MAC</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <c:forEach items="${controlPlayInfoList}" var="controlPlayInfo" varStatus="status">
+                <tr>
+                    <td><input type="radio" name="update" value="${controlPlayInfo.id}" currentRow="${status.index}"></td>
+                    <td>${status.index+1}</td>
+                    <td>${controlPlayInfo.mac}</td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
+    </div>
+
+</rapid:override>
+
+
+<%@ include file="../base.jsp"%>

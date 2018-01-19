@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
-<%@taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rapid" uri="http://www.rapid-framework.org.cn/rapid" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
@@ -28,13 +28,10 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <%--<link rel="stylesheet" type="text/css" href="Resource/css/base.css">--%>
+    <%--<script type="application/javascript" language="JavaScript" src="Resource/js/base.js"/>--%>
+    <link rel="shortcut icon" href="Resource/img/btv.ico">
 
-
-    <!--
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <script type="application/javascript" language="JavaScript" src="js/base.js"/>
-    <link rel="shortcut icon" href="img/xxx.ico">
-    -->
     <rapid:block name="css/js"/>
 
 </head>

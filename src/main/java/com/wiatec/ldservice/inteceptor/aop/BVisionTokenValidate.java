@@ -1,4 +1,4 @@
-package com.wiatec.ldservice.common.aop;
+package com.wiatec.ldservice.inteceptor.aop;
 
 import com.wiatec.ldservice.common.result.EnumResult;
 import com.wiatec.ldservice.common.result.XException;
@@ -12,11 +12,6 @@ import org.aspectj.lang.reflect.CodeSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.transaction.xa.XAException;
 
 /**
  * @author patrick
