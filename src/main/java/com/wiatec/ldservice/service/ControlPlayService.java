@@ -63,7 +63,7 @@ public class ControlPlayService {
     public List<ControlPlayInfo> list(){
         List<ControlPlayInfo> controlPlayInfoList = controlPlayDao.selectAll();
         List<ControlPlayInfo> controlPlayInfoList1 = new ArrayList<>();
-        Map<String, HttpSession> sessionMap = SessionListener.userSessionMap;
+        Map<String, HttpSession> sessionMap = SessionListener.sessionMap;
         for(ControlPlayInfo controlPlayInfo : controlPlayInfoList){
             if(sessionMap.containsKey(controlPlayInfo.getMac())){
                 controlPlayInfoList1.add(controlPlayInfo);

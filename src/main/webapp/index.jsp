@@ -20,8 +20,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />  
   <meta name="format-detection" content="telephone=no" />
   <link rel="shortcut icon" href="Resource/img/btv.ico">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <script type="application/javascript" language="JavaScript" src="js/base.js"/>
+  <link rel="stylesheet" type="text/css" href="Resource/css/base.css">
+  <script type="application/javascript" language="JavaScript" src="Resource/js/base.js"/>
 
 </head>
 

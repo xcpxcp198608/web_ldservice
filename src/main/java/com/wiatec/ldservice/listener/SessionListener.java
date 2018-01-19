@@ -18,7 +18,7 @@ public class SessionListener implements HttpSessionListener,HttpSessionAttribute
     public static Map<String ,HttpSession> sessionMap = new HashMap<>();
     public static Map<String ,HttpSession> userSessionMap = new HashMap<>();
     public static Map<String, HttpSession> idSessionMap = new HashMap<>();
-    public static final String KEY = "key";
+    public static final String KEY = "mac";
     public static final String KEY_USER_NAME = "username";
 
     @Override
