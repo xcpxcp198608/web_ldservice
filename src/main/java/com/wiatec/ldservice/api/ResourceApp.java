@@ -24,9 +24,9 @@ public class ResourceApp {
     @Resource
     private ResourceAppService resourceAppService;
 
-    @GetMapping(value = "/{type}")
-    public ResultInfo<ResourceAppInfo> getByType(@PathVariable int type){
-        return resourceAppService.selectByType(type);
+    @GetMapping(value = "/{userLevel}")
+    public ResultInfo<ResourceAppInfo> getByType(@PathVariable int userLevel){
+        return resourceAppService.selectByUserLevel(userLevel);
     }
 
 }

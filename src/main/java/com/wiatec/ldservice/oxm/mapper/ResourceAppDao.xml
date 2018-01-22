@@ -15,15 +15,16 @@
     <sql id="selectAll">
         SELECT id, label, icon, package_name, url, version_code, type
         FROM app_resources
-        ORDER BY label
     </sql>
 
     <select id="selectAll" resultMap="resourceAppInfo">
         <include refid="selectAll"/>
+        ORDER BY label
     </select>
 
     <select id="selectByType" resultMap="resourceAppInfo">
-        <include refid="selectAll"/> WHERE  type=#{type}
+        <include refid="selectAll"/> WHERE type=#{type}
+        ORDER BY label
     </select>
 
 

@@ -26,13 +26,15 @@ public class ResourceAppService {
     @Resource
     private ResourceAppDao resourceAppDao;
 
-    public ResultInfo<ResourceAppInfo> selectByType(int type){
+    public ResultInfo<ResourceAppInfo> selectByUserLevel(int userLevel){
         try{
             List<ResourceAppInfo> resourceAppInfoList;
-            if(type == 1){
+            if(userLevel > 1){
                 resourceAppInfoList = resourceAppDao.selectAll();
-            }else {
-                resourceAppInfoList = resourceAppDao.selectByType(type);
+            }else if(userLevel == 1) {
+                resourceAppInfoList = resourceAppDao.selectByType(0);
+            }else{
+                throw new XException(EnumResult.ERROR_NO_FOUND);
             }
             if(resourceAppInfoList == null || resourceAppInfoList.size() <= 0){
                 throw new XException(EnumResult.ERROR_NO_FOUND);
