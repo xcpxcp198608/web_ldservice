@@ -1,5 +1,6 @@
 package com.wiatec.ldservice.service;
 
+import com.wiatec.ldservice.common.cache.JedisMaster;
 import com.wiatec.ldservice.common.result.EnumResult;
 import com.wiatec.ldservice.common.result.ResultInfo;
 import com.wiatec.ldservice.common.result.ResultMaster;
@@ -27,26 +28,29 @@ public class ResourceAppService {
     private ResourceAppDao resourceAppDao;
 
     public ResultInfo<ResourceAppInfo> selectByUserLevel(int userLevel){
-        try{
-            List<ResourceAppInfo> resourceAppInfoList;
-            if(userLevel > 1){
-                resourceAppInfoList = resourceAppDao.selectAll();
-            }else if(userLevel == 1) {
-                resourceAppInfoList = resourceAppDao.selectByType(0);
-            }else{
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            if(resourceAppInfoList == null || resourceAppInfoList.size() <= 0){
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            return ResultMaster.success(resourceAppInfoList);
-
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        List<ResourceAppInfo> resourceAppInfoList;
+        if(userLevel > 2){
+            resourceAppInfoList = resourceAppDao.selectAll();
+        }else {
+            resourceAppInfoList = resourceAppDao.selectByType(0);
         }
+        if(resourceAppInfoList == null || resourceAppInfoList.size() <= 0){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
+        }
+        return ResultMaster.success(resourceAppInfoList);
+    }
+
+    public ResultInfo<ResourceAppInfo> selectByPackageName(String packageName){
+        ResourceAppInfo resourceAppInfo = JedisMaster.getInstance()
+                .get("ResourceAppInfo:"+ packageName, ResourceAppInfo.class);
+        if(resourceAppInfo == null) {
+            resourceAppInfo = resourceAppDao.selectByPackageName(packageName);
+            JedisMaster.getInstance().setex("ResourceAppInfo:" + packageName, ResourceAppInfo.class,
+                    resourceAppInfo, 600);
+        }
+        if(resourceAppInfo == null){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
+        }
+        return ResultMaster.success(resourceAppInfo);
     }
 }

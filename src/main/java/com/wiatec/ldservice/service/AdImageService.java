@@ -25,19 +25,11 @@ public class AdImageService {
     private AdImageDao adImageDao;
 
     public ResultInfo<ImageInfo> getAll(){
-        try{
-            List<ImageInfo> imageInfoList = adImageDao.selectAll();
-            if(imageInfoList == null || imageInfoList.size() <= 0){
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            return ResultMaster.success(imageInfoList);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        List<ImageInfo> imageInfoList = adImageDao.selectAll();
+        if(imageInfoList == null || imageInfoList.size() <= 0){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
         }
+        return ResultMaster.success(imageInfoList);
     }
 
 }

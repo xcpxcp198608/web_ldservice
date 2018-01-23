@@ -4,8 +4,8 @@ import com.wiatec.ldservice.common.result.EnumResult;
 import com.wiatec.ldservice.common.result.ResultInfo;
 import com.wiatec.ldservice.common.result.ResultMaster;
 import com.wiatec.ldservice.common.result.XException;
-import com.wiatec.ldservice.oxm.dao.RemoteAppDao;
-import com.wiatec.ldservice.oxm.pojo.RemoteApkInfo;
+import com.wiatec.ldservice.oxm.dao.RemoveAppDao;
+import com.wiatec.ldservice.oxm.pojo.RemoveApkInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -19,18 +19,18 @@ import java.util.List;
  * @date 25/07/2017
  */
 @Service
-public class RemoteAppService {
+public class RemoveAppService {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Resource
-    private RemoteAppDao remoteAppDao;
+    private RemoveAppDao removeAppDao;
 
-    public ResultInfo<RemoteApkInfo> selectAll(){
-        List<RemoteApkInfo> remoteApkInfoList = remoteAppDao.selectAll();
-        if(remoteApkInfoList == null || remoteApkInfoList.size() <= 0){
+    public ResultInfo<RemoveApkInfo> selectAll(){
+        List<RemoveApkInfo> removeApkInfoList = removeAppDao.selectAll();
+        if(removeApkInfoList == null || removeApkInfoList.size() <= 0){
             throw new XException(EnumResult.ERROR_NO_FOUND);
         }
-        return ResultMaster.success(remoteApkInfoList);
+        return ResultMaster.success(removeApkInfoList);
     }
 }

@@ -19,10 +19,11 @@ public class XExceptionHandler {
     public ResultInfo handleException(Exception e){
         if(e instanceof XException){
             XException xException = (XException) e;
+            logger.error("XException: ", e);
             return ResultMaster.error(xException.getCode(), xException.getMessage());
         }else {
-            logger.debug("= [system exception]= {}", e.getLocalizedMessage());
-            return ResultMaster.error(1001, e.getLocalizedMessage());
+            logger.debug("System Exception: ", e);
+            return ResultMaster.error(EnumResult.ERROR_SERVER_EXCEPTION);
         }
     }
 }

@@ -27,5 +27,9 @@
         ORDER BY label
     </select>
 
+    <select id="selectByPackageName" resultMap="resourceAppInfo">
+        <include refid="selectAll"/> WHERE package_name=#{packageName}
+    </select>
+
 
 </mapper>

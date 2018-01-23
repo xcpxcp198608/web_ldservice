@@ -58,123 +58,67 @@ public class BVisionService {
 
 
     public ResultInfo<BVisionChannelInfo> searchChannel(String key){
-        try{
-            List<BVisionChannelInfo> bVisionChannelInfoList = bVisionChannelDao.selectByKey(key);
-            if(bVisionChannelInfoList == null || bVisionChannelInfoList.size() <= 0){
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            for(BVisionChannelInfo bVisionChannelInfo: bVisionChannelInfoList){
-                bVisionChannelInfo.setUrl(AESUtil.encrypt(bVisionChannelInfo.getUrl(), AESUtil.KEY));
-            }
-            return ResultMaster.success(bVisionChannelInfoList);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        List<BVisionChannelInfo> bVisionChannelInfoList = bVisionChannelDao.selectByKey(key);
+        if(bVisionChannelInfoList == null || bVisionChannelInfoList.size() <= 0){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
         }
+        for(BVisionChannelInfo bVisionChannelInfo: bVisionChannelInfoList){
+            bVisionChannelInfo.setUrl(AESUtil.encrypt(bVisionChannelInfo.getUrl(), AESUtil.KEY));
+        }
+        return ResultMaster.success(bVisionChannelInfoList);
     }
 
     public ResultInfo<BVisionChannelTypeInfo> selectChannelType(String type){
-        try{
-            List<BVisionChannelTypeInfo> bVisionChannelTypeInfoList = bVisionChannelTypeDao
-                    .selectByType(type);
-            if(bVisionChannelTypeInfoList == null || bVisionChannelTypeInfoList.size() <= 0){
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            return ResultMaster.success(bVisionChannelTypeInfoList);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        List<BVisionChannelTypeInfo> bVisionChannelTypeInfoList = bVisionChannelTypeDao
+                .selectByType(type);
+        if(bVisionChannelTypeInfoList == null || bVisionChannelTypeInfoList.size() <= 0){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
         }
+        return ResultMaster.success(bVisionChannelTypeInfoList);
     }
 
     public ResultInfo<BVisionChannelType1Info> selectChannelType1(String type){
-        try{
-            List<BVisionChannelType1Info> bVisionChannelType1InfoList = bVisionChannelType1Dao
-                    .selectByType(type);
-            if(bVisionChannelType1InfoList == null || bVisionChannelType1InfoList.size() <= 0){
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            return ResultMaster.success(bVisionChannelType1InfoList);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        List<BVisionChannelType1Info> bVisionChannelType1InfoList = bVisionChannelType1Dao
+                .selectByType(type);
+        if(bVisionChannelType1InfoList == null || bVisionChannelType1InfoList.size() <= 0){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
         }
+        return ResultMaster.success(bVisionChannelType1InfoList);
     }
 
     public ResultInfo<BVisionChannelType2Info> selectChannelType2(String type){
-        try{
-            List<BVisionChannelType2Info> bVisionChannelType2InfoList = bVisionChannelType2Dao
-                    .selectByType(type);
-            if(bVisionChannelType2InfoList == null || bVisionChannelType2InfoList.size() <= 0){
-                throw new XException(EnumResult.ERROR_NO_FOUND);
-            }
-            return ResultMaster.success(bVisionChannelType2InfoList);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        List<BVisionChannelType2Info> bVisionChannelType2InfoList = bVisionChannelType2Dao
+                .selectByType(type);
+        if(bVisionChannelType2InfoList == null || bVisionChannelType2InfoList.size() <= 0){
+            throw new XException(EnumResult.ERROR_NO_FOUND);
         }
+        return ResultMaster.success(bVisionChannelType2InfoList);
     }
 
 
     public ResultInfo report(BVisionChannelReportInfo bVisionChannelReportInfo){
-        try{
-            bVisionChannelReportDao.insertOne(bVisionChannelReportInfo);
-            return ResultMaster.success();
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
-        }
+        bVisionChannelReportDao.insertOne(bVisionChannelReportInfo);
+        return ResultMaster.success();
     }
 
     @Transactional(rollbackFor = Exception.class)
     public ResultInfo logStart(BVisionChannelLogInfo bVisionChannelLogInfo){
-        try{
-            bVisionChannelLogInfo.setStartTime(TimeUtil.getStrTime());
-            bVisionChannelLogDao.insertOne(bVisionChannelLogInfo);
-            return ResultMaster.success();
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
-        }
+        bVisionChannelLogInfo.setStartTime(TimeUtil.getStrTime());
+        bVisionChannelLogDao.insertOne(bVisionChannelLogInfo);
+        return ResultMaster.success();
     }
 
     @Transactional(rollbackFor = Exception.class)
     public ResultInfo logStop(BVisionChannelLogInfo bVisionChannelLogInfo){
-        try{
-            BVisionChannelLogInfo bVisionChannelLogInfo1 = bVisionChannelLogDao.selectOneByTag(bVisionChannelLogInfo.getTag());
-            String endTime = TimeUtil.getStrTime();
-            long sTime = TimeUtil.getUnixFromStr(bVisionChannelLogInfo1.getStartTime());
-            long eTime = System.currentTimeMillis();
-            long vTime = eTime - sTime;
-            bVisionChannelLogInfo.setEndTime(endTime);
-            bVisionChannelLogInfo.setViewTime(vTime);
-            bVisionChannelLogDao.updateOne(bVisionChannelLogInfo);
-            return ResultMaster.success();
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
-        }
+        BVisionChannelLogInfo bVisionChannelLogInfo1 = bVisionChannelLogDao.selectOneByTag(bVisionChannelLogInfo.getTag());
+        String endTime = TimeUtil.getStrTime();
+        long sTime = TimeUtil.getUnixFromStr(bVisionChannelLogInfo1.getStartTime());
+        long eTime = System.currentTimeMillis();
+        long vTime = eTime - sTime;
+        bVisionChannelLogInfo.setEndTime(endTime);
+        bVisionChannelLogInfo.setViewTime(vTime);
+        bVisionChannelLogDao.updateOne(bVisionChannelLogInfo);
+        return ResultMaster.success();
     }
 
 }

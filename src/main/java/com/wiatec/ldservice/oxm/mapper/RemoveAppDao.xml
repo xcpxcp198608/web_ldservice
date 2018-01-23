@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wiatec.ldservice.oxm.dao.RemoveAppDao">
+    <resultMap type="com.wiatec.ldservice.oxm.pojo.RemoveApkInfo" id="apkInfo">
+        <id column="id" property="id"/>
+        <result column="packageName" property="packageName"/>
+        <result column="code" property="code"/>
+    </resultMap>
+
+    <sql id="selectAll">SELECT id, packageName, code FROM app_remove</sql>
+
+    <select id="selectAll" resultMap="apkInfo">
+        <include refid="selectAll"/>
+    </select>
+
+
+</mapper>

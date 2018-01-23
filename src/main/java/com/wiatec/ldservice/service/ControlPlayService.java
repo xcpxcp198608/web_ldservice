@@ -38,26 +38,18 @@ public class ControlPlayService {
      */
     @Transactional(rollbackFor = Exception.class)
     public ResultInfo get(HttpServletRequest request, String mac){
-        try{
-            HttpSession session = SessionListener.getSession(mac);
-            if(session == null){
-                session = request.getSession();
-                session.setAttribute("mac", mac);
-            }
-            ControlPlayInfo controlPlayInfo = controlPlayDao.selectOne(mac);
-            if(controlPlayInfo == null){
-                controlPlayDao.insertOne(mac);
-            }else {
-                controlPlayDao.updateToNoPlay(mac);
-            }
-            return ResultMaster.success(controlPlayInfo);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
+        HttpSession session = SessionListener.getSession(mac);
+        if(session == null){
+            session = request.getSession();
+            session.setAttribute("mac", mac);
         }
+        ControlPlayInfo controlPlayInfo = controlPlayDao.selectOne(mac);
+        if(controlPlayInfo == null){
+            controlPlayDao.insertOne(mac);
+        }else {
+            controlPlayDao.updateToNoPlay(mac);
+        }
+        return ResultMaster.success(controlPlayInfo);
     }
 
     public List<ControlPlayInfo> list(){

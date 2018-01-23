@@ -23,27 +23,11 @@ public class LivePlayChannelService {
     private LivePlayChannelDao livePlayChannelDao;
 
     public List<ControlPlayChannelInfo> getAllChannelId(){
-        try{
-            return livePlayChannelDao.selectAllChannelId();
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
-        }
+        return livePlayChannelDao.selectAllChannelId();
     }
 
     public String getUrlById(int channelId){
-        try{
-            return livePlayChannelDao.selectUrlByChannelId(channelId);
-        }catch (XException e){
-            logger.error("XException: ", e);
-            throw new XException(e.getCode(), e.getMessage());
-        }catch (Exception e){
-            logger.error("Exception: ", e);
-            throw new XException(EnumResult.ERROR_SERVER_EXCEPTION);
-        }
+        return livePlayChannelDao.selectUrlByChannelId(channelId);
     }
 
 
