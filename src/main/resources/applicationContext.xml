@@ -13,8 +13,8 @@
             http://www.springframework.org/schema/tx
             http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/tool http://www.springframework.org/schema/tool/spring-tool.xsd">
 
-    <bean name="applicationContext" class="com.wiatec.ldservice.common.utils.ApplicationContextHelper"/>
-    <bean name="applicationLoadedContext" class="com.wiatec.ldservice.common.utils.ApplicationContextAfterLoading"/>
+    <bean name="applicationContext" class="com.wiatec.ldservice.common.instance.ApplicationContextHelper"/>
+    <bean name="applicationLoadedContext" class="com.wiatec.ldservice.common.instance.ApplicationContextAfterLoading"/>
 
     <context:annotation-config/>
 

@@ -1,7 +1,9 @@
 package com.wiatec.ldservice.common.utils;
 
 /**
- * Created by xuchengpeng on 07/06/2017.
+ *
+ * @author xuchengpeng
+ * @date 07/06/2017
  */
 public class TextUtil {
 

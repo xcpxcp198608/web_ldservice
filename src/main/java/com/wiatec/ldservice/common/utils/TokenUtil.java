@@ -9,7 +9,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class TokenUtil {
 
-    public static String create(String s1, String s2){
+    public static String create16(String s1, String s2){
         try {
             long time = System.currentTimeMillis();
             MessageDigest messageDigest = MessageDigest.getInstance("MD5");
@@ -35,12 +35,5 @@ public class TokenUtil {
         }
     }
 
-    public static boolean tokenValidate(String token){
-        String tokenAfterDecrypt = AESUtil.decrypt(token,AESUtil.KEY);
-        return tokenAfterDecrypt.startsWith("5c:41:e7");
-    }
 
-    public static String createKey(int i){
-        return TokenUtil.create(i+"", "www.wiatec.com");
-    }
 }

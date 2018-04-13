@@ -12,16 +12,16 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Aspect
-public class LogAuthService {
+public class LogService {
 
-    private Logger logger = LoggerFactory.getLogger(LogAuthService.class);
+    private Logger logger = LoggerFactory.getLogger(LogService.class);
 
     @Pointcut("execution(public * com.wiatec.ldservice.service.web.*.*(..))")
     public void pointCut(){ }
 
     /**
-     * 前置通知
-     * @param joinPoint    目标方法对象
+     * before
+     * @param joinPoint joinPoint
      */
     @Before("pointCut()")
     public void before(JoinPoint joinPoint) {
@@ -37,8 +37,8 @@ public class LogAuthService {
     }
 
     /**
-     * 异常通知
-     * @param exception  发生的异常
+     * exception
+     * @param exception  exception
      */
     @AfterThrowing(value = "pointCut()" , throwing = "exception")
     public void afterThrowing(Exception exception) {
@@ -62,7 +62,7 @@ public class LogAuthService {
     }
 
     /**
-     * 后置通知
+     * after
      */
     @After("pointCut()")
     public void after() {

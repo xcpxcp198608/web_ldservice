@@ -1,4 +1,4 @@
-package com.wiatec.ldservice.common.utils;
+package com.wiatec.ldservice.common.instance;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -6,7 +6,9 @@ import org.springframework.context.ApplicationContextAware;
 
 
 /**
- * Created by xuchengpeng on 12/06/2017.
+ *
+ * @author xuchengpeng
+ * @date 12/06/2017
  */
 public class ApplicationContextHelper implements ApplicationContextAware{
 

@@ -70,8 +70,7 @@ public class JedisMaster {
             }else {
                 s = jedis.setex(key.getBytes(), timeout, bytes);
             }
-            System.out.println(s);
-            return "OK".equalsIgnoreCase(s);
+            return "ok".equalsIgnoreCase(s);
         }catch (XException e){
             logger.error("XException: ", e);
             throw new XException(e.getCode(), e.getMessage());

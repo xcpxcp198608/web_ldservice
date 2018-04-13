@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.io.Reader;
 
 /**
- * Created by xuchengpeng on 12/06/2017.
+ *
+ * @author patrick
+ * @date 12/06/2017
  */
 public class SqlSessionHelper {
 
