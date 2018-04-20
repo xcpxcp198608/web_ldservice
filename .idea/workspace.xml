@@ -10,29 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6c339b8-5434-4f95-8819-736165bca0d8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/api/RCQRCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/instance/ApplicationContextAfterLoading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/instance/ApplicationContextHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Resource/img/tips.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.0/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Gradle___com_wiatec___ldservice_1_0_SNAPSHOT_war__exploded_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Gradle___com_wiatec___ldservice_1_0_SNAPSHOT_war__exploded_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__javax_servlet_jsp_javax_servlet_jsp_api_2_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_tomcat_tomcat_servlet_api_8_0_24.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ldservice_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ldservice_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ldservice_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/ldservice_test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/aop/LogAuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/aop/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/cache/JedisMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/cache/JedisMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/ApplicationContextAfterLoading.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/ApplicationContextHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/RegularUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/RegularUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/SqlSessionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/SqlSessionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/TextUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/TextUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/TokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/TokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -443,7 +423,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/oxm/mapper/BVisionChannelLogDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/api/BVision.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/oxm/dao/AdImageDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/oxm/mapper/AdImageDao.xml" />
@@ -491,9 +470,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/utils/RegularUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/instance/ApplicationContextHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/common/aop/LogService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/api/RCQRCode.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp" />
       </list>
     </option>
   </component>
@@ -523,6 +503,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -539,39 +522,104 @@
               <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
               <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ldservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ldservice" type="462c0819:PsiDirectoryNode" />
-              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ldservice" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="Resource" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ldservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ldservice" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+              <item name="qrcode" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -851,7 +899,11 @@
       <workItem from="1516692789759" duration="213000" />
       <workItem from="1521184012431" duration="38000" />
       <workItem from="1521430935610" duration="297000" />
-      <workItem from="1523584759119" duration="1198000" />
+      <workItem from="1523584759119" duration="1284000" />
+      <workItem from="1523587711125" duration="823000" />
+      <workItem from="1524191059644" duration="380000" />
+      <workItem from="1524212231178" duration="650000" />
+      <workItem from="1524216405719" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="201801181700">
       <created>1516266000224</created>
@@ -888,7 +940,14 @@
       <option name="project" value="LOCAL" />
       <updated>1516671194357</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="201804131025">
+      <created>1523586474087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523586474089</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -909,7 +968,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52059000" />
+    <option name="totallyTimeSpent" value="54836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
@@ -918,12 +977,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.28626943" />
       <window_info anchor="right" id="Maven Projects" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="right" id="CDI" order="3" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.16882184" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.3288948" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18462643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -932,16 +990,15 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32756326" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35818908" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35818908" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32934928" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32814527" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18462643" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1961207" />
       <window_info anchor="right" id="Bean Validation" order="3" show_stripe_button="false" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -951,6 +1008,8 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901555" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32756326" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3288948" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="File Transfer" order="8" weight="0.32934928" />
@@ -968,7 +1027,8 @@
     <MESSAGE value="201801191555" />
     <MESSAGE value="201801221225" />
     <MESSAGE value="201801230930" />
-    <option name="LAST_COMMIT_MESSAGE" value="201801230930" />
+    <MESSAGE value="201804131025" />
+    <option name="LAST_COMMIT_MESSAGE" value="201804131025" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -986,9 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <marker date="1516602313790" expanded="true" signature="459:503" ph="SELECT id, p... app_remove" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1017,9 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <marker date="1516074017486" expanded="true" signature="582:653" ph="SELECT id, u... upgrade" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1068,9 +1122,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="69" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="69" />
-          <folding>
-            <marker date="1516613869602" expanded="true" signature="687:775" ph="SELECT id, l... app_resources" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1249,15 +1300,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/service/liveplay/LivePlayChannelService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1293,24 +1335,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="63" column="47" lean-forward="true" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/api/RCQRCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1322,9 +1346,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wiatec/ldservice/api/RCQRCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/Resource/img/tips.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/qrcode/result.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
         </state>
       </provider>
     </entry>

@@ -9,12 +9,12 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/ldservice/current.log</file>
+        <file>/home/java_app/logs/ldservice/current.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{32} - %msg%n</pattern>
         </encoder>
         <rollingPolicy  class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <FileNamePattern>logs/ldservice/log_%d{yyyy-MM-dd}.log</FileNamePattern>
+            <FileNamePattern>/home/java_app/logs/ldservice/log_%d{yyyy-MM-dd}.log</FileNamePattern>
         </rollingPolicy>
     </appender>
 

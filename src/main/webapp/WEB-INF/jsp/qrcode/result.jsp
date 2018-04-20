@@ -9,7 +9,7 @@
 <head>
     <base href="<%=basePath%>">
 
-    <title>B·VISION</title>
+    <title>B·KeyMo AIR</title>
 
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="cache-control" content="no-cache">
@@ -20,7 +20,7 @@
           content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="shortcut icon" href="img/btv.ico">
+    <link rel="shortcut icon" href="Resource/img/btv.ico">
     <style>
         * {
             margin: 0;
@@ -49,7 +49,7 @@
 
 <div id="tips" class="tips">
 
-    <img src="/Resource/img/tips.png" />
+    <img src="https://s1.ax1x.com/2018/04/20/CK02Ks.png" />
 
 </div>
 
@@ -62,7 +62,7 @@
         if (ua.indexOf('iphone') > 0) {
             window.location.href = "https://itunes.apple.com/us/app/b-keymo-air/id1370302906?ls=1&mt=8";
         } else if (ua.indexOf('android') > 0) {
-            window.location.href = "http://www.ldlegacy.com:8899/static/ldservice/apk/bmtool.apk";
+            window.location.href = "https://play.google.com/store/apps/details?id=com.remote.client";
         } else if (ua.indexOf('windows phone') > 0) {
             window.location.href = "";
         } else if (ua.indexOf('ipad') > 0) {
